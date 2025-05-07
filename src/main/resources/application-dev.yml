@@ -1,0 +1,7 @@
+--- # 数据源配置
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhosts:6543/test
+    username: username
+    password: password
