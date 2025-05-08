@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.yjl.entity.ProjectManage;
 import org.yjl.mapper.ProjectManageMapper;
 
 @RequiredArgsConstructor
@@ -16,7 +17,7 @@ public class HelloController {
     private final ProjectManageMapper projectManageMapper;
     @GetMapping
     public void test(){
-        projectManageMapper.selectList(Wrappers.emptyWrapper());
+        projectManageMapper.selectList(Wrappers.<ProjectManage>emptyWrapper());
         log.info("hello");
     }
 }

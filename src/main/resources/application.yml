@@ -10,7 +10,7 @@ spring:
   application:
     name: Auto-Deploy
   profiles:
-    active: dev
+    active: @profiles.active@
   mvc:
     # 设置静态资源路径 防止所有请求都去查静态资源
     static-path-pattern: /static/**
@@ -28,8 +28,6 @@ spring:
       # 允许对象忽略json中不存在的属性
       fail_on_unknown_properties: false
 mybatis-plus:
-  # 多包名使用
-  mapperPackage: org.yjl.mapper
   # 对应的 XML 文件位置
   mapperLocations: classpath*:mapper/**/*Mapper.xml
   # 实体扫描，多个package用逗号或者分号分隔
@@ -40,3 +38,9 @@ mybatis-plus:
       # AUTO 自增 NONE 空 INPUT 用户输入 ASSIGN_ID 雪花 ASSIGN_UUID 唯一 UUID
       # 如需改为自增 需要将数据库表全部设置为自增
       idType: ASSIGN_ID
+# 日志配置
+logging:
+  level:
+    org.springframework: warn
+    org.mybatis.spring.mapper: error
+    org.apache.fury: warn
