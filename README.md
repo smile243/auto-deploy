@@ -1,0 +1,1 @@
+# 功能介绍：实现一键拉取gitlab自定义模版项目，部署到jenkins、rancher中

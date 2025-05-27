@@ -32,7 +32,7 @@
             <artifactId>gitlab4j-api</artifactId>
             <version>${git-lab.version}</version>
         </dependency>
-
+        <!--  jenkins  -->
         <dependency>
             <groupId>com.surenpi.ci</groupId>
             <artifactId>jenkins.client.java</artifactId>
